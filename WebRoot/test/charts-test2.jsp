@@ -87,7 +87,6 @@
         		 <div class="ec-pie-chart">
         		 	<jsp:include page="/charts/bar-chart.jsp" />
 				 </div>
-
             </div>     
         </div>
         
