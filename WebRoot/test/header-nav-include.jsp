@@ -1,6 +1,6 @@
-<%@ page language="java" import="java.util.*"
-	contentType="text/html; charset=utf-8"%>
+<%@ page language="java" import="java.util.*" contentType="text/html; charset=utf-8"%>
 
+<!-- 虽然头部可以固定，但是覆盖不了图片。  -->
 <div class="grid_12 header-repeat" style="position:fixed;">
 	<jsp:include page="../view/include/header.jsp" />
 </div>
