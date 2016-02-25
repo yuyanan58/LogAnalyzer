@@ -3,11 +3,11 @@
 <!-- I am header begin -->
 <div id="branding">
 	<div class="floatleft">
-		<img src="../lib/img/logo.png" alt="Logo" />
+		<img src="/dreaming/lib/img/logo.png" alt="Logo" />
 	</div>
 	<div class="floatright">
 		<div class="floatleft">
-			<img src="../lib/img/img-profile.jpg" alt="Profile Pic" />
+			<img src="/dreaming/lib/img/img-profile.jpg" alt="Profile Pic" />
 		</div>
 		<div class="floatleft marginleft10">
 			<ul class="inline-ul floatleft">

@@ -74,9 +74,7 @@
                 <h2>
                     Tables & Grids</h2>
                 <div class="block">
-			
-				<jsp:include page="./include/logmining-table.jsp" />
-			
+					<jsp:include page="../logMining/logmining-table.jsp" />
                 </div>
             </div>
         </div>

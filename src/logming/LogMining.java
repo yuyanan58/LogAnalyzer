@@ -24,6 +24,7 @@ import com.pku.yhf.EclatRelease;
  */
 
 public class LogMining {
+	private String[] logMiningString ;
 	private JSONObject logMinJsonObject;
 	private String logPath = null ;
 	private File file = null;
@@ -33,6 +34,9 @@ public class LogMining {
 	 * 
 	 * @return
 	 */
+	public String[] getLogMiningString(){
+		return this.logMiningString;
+	}
 	public String getLogMinJson() {
 		return logMinJsonObject.toString();
 	}
@@ -77,9 +81,11 @@ public class LogMining {
 			logMinJsonObject = new JSONObject();
 			{
 				logMinJsonObject.put("Count", numm);
+				logMiningString = new String[numm] ;
 				JSONArray logMinArray = new JSONArray();
 				for (int i = 0; i < numm; i++) {
 					logMinArray.add(i, An[i][1]);
+					logMiningString[i] = An[i][1] ; 
 				}
 				logMinJsonObject.accumulate("resList", logMinArray);
 			}
