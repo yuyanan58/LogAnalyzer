@@ -11,7 +11,8 @@
 	<tbody class="logminingtable">    
         <tr><td>哈哈哈，我是王大锤。 </td></tr>
         <%
-        	LogMining logMining = new LogMining("L:/codesoft/Tomcat/apache-tomcat-7.0.68/webapps/dreaming/logFiles/a.log");
+	        String logPath = "L:/codesoft/Tomcat/apache-tomcat-7.0.68/webapps/dreaming/logFiles/a.log";
+        	LogMining logMining = new LogMining(logPath);
         	String[] t = logMining.getLogMiningString() ;
         	for(int i = 0 ; i < t.length ; i ++){
         		if(i % 2 == 0){

@@ -18,9 +18,7 @@ import com.pku.yhf.EclatRelease;
 
 /**
  * LogMining
- * 
  * @author onion
- * 
  */
 
 public class LogMining {
@@ -29,11 +27,12 @@ public class LogMining {
 	private String logPath = null ;
 	private File file = null;
 	private static final boolean DEBUG = false ;
+	
 	/**
 	 * 得到分析后的日志的JSON字符串。
-	 * 
 	 * @return
 	 */
+	
 	public String[] getLogMiningString(){
 		return this.logMiningString;
 	}
@@ -51,11 +50,11 @@ public class LogMining {
 		this.logPath = path;
 		file = new File(this.logPath);
 		gao();
-		System.out.println(LogMining.class.getResource("/"));
+		if(DEBUG) System.out.println(LogMining.class.getResource("/"));
 	}
 
 	private void gao() {
-		System.err.println("gao is BEGIN");
+		if(DEBUG) System.err.println("gao is BEGIN");
 		LogTree t = new LogTree();
 		String str[][] = t.logtree(file);
 		String An[][] = new String[50][2];
@@ -72,11 +71,13 @@ public class LogMining {
 				An[numm++][1] = str[i][0];
 			}
 		}
-		for (int i = 0; i < numm; i++) {
-			System.out.print("R : ");
-			System.out.println(An[i][1]);
+		if(DEBUG) {
+			for (int i = 0; i < numm; i++) {
+				System.out.print("R : ");
+				System.out.println(An[i][1]);
+			}
 		}
-
+		
 		try {
 			logMinJsonObject = new JSONObject();
 			{
@@ -92,8 +93,8 @@ public class LogMining {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println(logMinJsonObject.toString());
-		System.err.println("gao is END");
+		if(DEBUG) System.out.println(logMinJsonObject.toString());
+		if(DEBUG) System.err.println("gao is END");
 	}
 
 	public void test() throws IOException {

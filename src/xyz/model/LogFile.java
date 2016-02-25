@@ -2,6 +2,8 @@ package xyz.model;
 
 import java.io.File;
 
+import logtree.main;
+
 /**
  * LogFile 类，所有的日志文件都是该类的一个对象。
  * @author onion
