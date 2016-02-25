@@ -3,3 +3,15 @@ Sep 30 2014 01:03:11 NIZWA-P-CORE-NE5000E-1 %%01CMD/4/SUPERLOGIN(l)[349847]:User
 Sep 30 2014 01:03:11 NIZWA-P-CORE-NE5000E-1 CMD/2/SUPER_CHANGE_SUCCESS:OID 1.3.6.1.4.1.2011.5.25.37.2.136 Super change successful.
 Sep 30 2014 01:03:14 NIZWA-P-CORE-NE5000E-1 %%01SHELL/5/AUTHCMDFLAGCHG(l)[349860]:User u2000 command authorization flag changed from 0 to 0. (Source=85.154.250.12, LineType=VTY)
 Sep  9 2014 06:58:30 NIZWA-P-CORE-NE5000E-1 %%01SHELL/5/AUTHCMDFLAGCHG(l)[343135]:User liujinku command authorization flag changed from 0 to 0. (Source=85.154.250.12, LineType=VTY)
+
+################################################################
+#Automatic record log end,current health information as follows:
+Slot                    CPU Usage     Memory Usage (Used/Total)
+---------------------------------------------------------------
+17      MPU(System Master) 14%           23%  439MB/1877MB
+1       LPU                13%           22%  182MB/820MB
+2       LPU                14%           27%  227MB/820MB
+3       LPU                10%           21%  176MB/820MB
+18      MPU                11%           21%  399MB/1877MB
+#DateTime Stamp: 2014-09-08 12:43:35.350
+################################################################
