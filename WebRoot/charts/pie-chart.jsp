@@ -3,15 +3,15 @@
 
 <div id="pieChart" style="width: 100%; height: 100%"></div>
 <script type="text/javascript">
-	var dom = document.getElementById("pieChart");
-	var myChart = echarts.init(dom);
+	var pieChartDom = document.getElementById("pieChart");
+	var pieChartDomMyChart = echarts.init(pieChartDom);
 	var app = {};
 	$.getJSON("/dreaming/charts/pie-chart-json.jsp", function(dataALL) {
 		
 		var data1 = dataALL.data1 ;
 		var data2 = dataALL.data2 ;
 		
-		option = {
+		pieChartOption = {
 			title : {
 				text : '日志事件统计',
 				subtext : '全部事件',
@@ -42,9 +42,9 @@
 			} ]
 		};
 
-		if (option && typeof option === "object") {
+		if (pieChartOption && typeof pieChartOption === "object") {
 			var startTime = +new Date();
-			myChart.setOption(option, true);
+			pieChartDomMyChart.setOption(pieChartOption, true);
 			var endTime = +new Date();
 			var updateTime = endTime - startTime;
 			console.log("Pie Chart Time used:", updateTime);

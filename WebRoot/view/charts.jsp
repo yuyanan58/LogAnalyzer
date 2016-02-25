@@ -100,6 +100,15 @@
             </div>
         </div>
         
+        <div class="grid_10">
+            <div class="box round">
+                <h2>Cmp-Chart</h2>
+        		 <div class="ec-cmp-chart">
+        		 	<jsp:include page="/charts/cmp-chart.jsp" />
+				 </div>                
+            </div>
+        </div>
+                
         <div class="grid_5">
         	<div class="box round">
         		 <h2> Charts</h2>
