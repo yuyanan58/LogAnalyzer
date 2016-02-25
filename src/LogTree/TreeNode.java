@@ -1,4 +1,4 @@
-package LogTree;  
+package logtree;  
   
 public class TreeNode   
 {   

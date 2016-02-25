@@ -4,7 +4,7 @@
 <ul class="nav main">
     <li class="ic-dashboard"><a href="/dreaming/view/index.jsp"><span>主页<!-- Dashboard --></span></a> </li>
     <li class="ic-charts"><a href="charts.jsp"><span>基本图表<!-- Charts - Graphs --></span></a></li>
-	<li class="ic-grid-tables"><a href="table.jsp"><span>数据表格</span></a></li>
+	<li class="ic-grid-tables"><a href="table.jsp"><span>日志摘要</span></a></li>
     <li class="ic-grid-tables"><a href="log-gallery.jsp"><span>日志管理</span></a></li>
     <li class="ic-typography"><a href="typography.jsp"><span>相关论文</span></a></li>    
     <li class="ic-form-style"><a href="javascript:"><span>控制台</span></a>

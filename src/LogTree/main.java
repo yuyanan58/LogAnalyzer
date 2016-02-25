@@ -1,4 +1,4 @@
-package LogTree;
+package logtree;
 
 import java.util.Scanner;
 

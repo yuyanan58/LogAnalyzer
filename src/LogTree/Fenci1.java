@@ -1,4 +1,4 @@
-package LogTree;
+package logtree;
 
 import java.awt.List;
 import java.util.ArrayList;
