@@ -1,4 +1,4 @@
-package xyz.charts.barChart;
+package xyz.charts.bar;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;

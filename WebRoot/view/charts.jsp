@@ -102,13 +102,22 @@
         
         <div class="grid_10">
             <div class="box round">
+                <h2>事件发生的时间分布</h2>
+        		 <div class="ec-event-time-chart">
+        		 	<jsp:include page="/charts/event-time-chart.jsp" />
+				 </div>                
+            </div>
+        </div>
+        
+        <div class="grid_10">
+            <div class="box round">
                 <h2>Cmp-Chart</h2>
         		 <div class="ec-cmp-chart">
         		 	<jsp:include page="/charts/cmp-chart.jsp" />
 				 </div>                
             </div>
         </div>
-                
+                       
         <div class="grid_5">
         	<div class="box round">
         		 <h2> Charts</h2>

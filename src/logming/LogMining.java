@@ -46,7 +46,7 @@ public class LogMining {
 	 * @param path
 	 */
 	public LogMining(String path) {
-		System.out.println(path);
+		if(DEBUG) System.out.println(path);
 		this.logPath = path;
 		file = new File(this.logPath);
 		gao();
