@@ -44,6 +44,7 @@
 
 		if (pieChartOption && typeof pieChartOption === "object") {
 			var startTime = +new Date();
+			pieChartDomMyChart.hideLoading();
 			pieChartDomMyChart.setOption(pieChartOption, true);
 			var endTime = +new Date();
 			var updateTime = endTime - startTime;

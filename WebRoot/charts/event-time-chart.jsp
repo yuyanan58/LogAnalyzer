@@ -10,10 +10,7 @@
 		var eventTimeChartdate = dataALL.date;
 		var eventTimeChartdata = dataALL.data;
 		var eventTimeChartmax = dataALL.max;
-		/* for (var i = 1; i < 300; i++) {
-			eventTimeChartdate.push(i);
-			eventTimeChartdata.push(i);
-		} */
+		
 		eventTimeChartoption = {
 		    title: {
 		        x: 'center',
@@ -43,7 +40,8 @@
 		    yAxis: [
 		        {
 		            type: 'value',
-		            max: eventTimeChartmax
+		            max: eventTimeChartmax,
+		            interval: 20,
 		        }
 		    ],
 		    dataZoom: {
@@ -68,6 +66,7 @@
 
 		if (eventTimeChartoption && typeof eventTimeChartoption === "object") {
 			var startTime = +new Date();
+			eventTimeChartDomMyChart.hideLoading();
 			eventTimeChartDomMyChart.setOption(eventTimeChartoption, true);
 			var endTime = +new Date();
 			var updateTime = endTime - startTime;

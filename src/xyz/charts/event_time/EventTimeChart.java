@@ -88,7 +88,7 @@ public class EventTimeChart {
 				dateArray.add(i, Stamp2DateTool.Stamp2Date(wangDaChuis[i].date));
 				max = Math.max(max, wangDaChuis[i].data);
 			}
-			max *= 1.3 ;
+			max *= 1.05 ;
 			resJsonObject.put("data", dataArray) ;
 			resJsonObject.put("date", dateArray) ;
 			resJsonObject.put("max", max);

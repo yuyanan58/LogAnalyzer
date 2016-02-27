@@ -84,7 +84,7 @@
         <div class="grid_10">
         	<div class="box round first">
         		 <h2>Bar-Chart</h2>
-        		 <div class="ec-pie-chart">
+        		 <div class="ec-bar-chart">
         		 	<jsp:include page="/charts/bar-chart.jsp" />
 				 </div>
 
@@ -94,7 +94,7 @@
         <div class="grid_10">
             <div class="box round">
                 <h2>Pie-Chart</h2>
-        		 <div class="ec-bar-chart">
+        		 <div class="ec-pie-chart">
         		 	<jsp:include page="/charts/pie-chart.jsp" />
 				 </div>                
             </div>
