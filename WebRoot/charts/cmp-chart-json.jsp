@@ -2,6 +2,6 @@
 <%@ page import="xyz.charts.cmp.CmpChart" %>
 <%
 	String path = "L:/codesoft/Tomcat/apache-tomcat-7.0.68/webapps/dreaming/logFiles/a.log";
-	CmpChart chart = new CmpChart(path, 1, 2);
+	CmpChart chart = new CmpChart(path, 3, 1);
 	out.print(chart.getCmpStr());
 %>

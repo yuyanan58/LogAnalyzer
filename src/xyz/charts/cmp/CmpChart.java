@@ -14,7 +14,7 @@ import xyz.tools.analyzer2events.Analyzer2eventList.Event_li;
 
 public class CmpChart {
 	private final SimpleDateFormat format = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" );
-	private static final boolean DEBUG = true ;
+	private static final boolean DEBUG = false ;
 	private String cmpStr = null ;
 	private int ind1 = 0 ;
 	private int ind2 = 1 ;
@@ -45,7 +45,9 @@ public class CmpChart {
 		res.data1_name = event_li[ind1].name ;
 		res.data2_name = event_li[ind2].name ;
 		res.time_tmp  = analyzer2eve1eve2(analyzer , res.data1_name , res.data2_name);	
-		System.out.println("length = " + res.time_tmp.length);
+		if(DEBUG){
+			System.out.println("length = " + res.time_tmp.length);
+		}
 		int ind_time_tmp = 0;
 		
 		res.data1 = new LinkedList<>() ;
@@ -118,6 +120,8 @@ public class CmpChart {
 				}
 			}
 			ans.put("data2_data", data2_data) ;
+			ans.put("name0", res.data1_name);
+			ans.put("name1", res.data2_name);
 		}
 		return ans;
 	}
@@ -130,7 +134,9 @@ public class CmpChart {
 			}
 		}
 		long[] res = new long[time.size()];
-		System.out.println("size = " + time.size());
+		if(DEBUG){
+			System.out.println("size = " + time.size());
+		}
 		for(int i = 0 ; i < time.size() ; i ++){
 			res[i] = time.get(i);
 		}

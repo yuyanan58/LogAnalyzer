@@ -9,6 +9,8 @@
 		var cmpChartTimeTamp_data = dataALL.time_data;
 		var cmpChartData2_data = dataALL.data2_data;
 		var cmpChartData1_data = dataALL.data1_data;
+		var cmpChartNameStr0    = dataALL.name0;
+		var cmpChartNameStr1    = dataALL.name1;
 		
 		cmpChartOption = {
 			    title : {
@@ -24,15 +26,15 @@
 			        trigger: 'axis',
 			        formatter: function(params) {
 			            return params[0].name + '<br/>'
-			                   + params[0].seriesName + ' : ' + params[0].value + ' (m^3/s)<br/>'
-			                   + params[1].seriesName + ' : ' + -params[1].value + ' (mm)';
+			                   + params[0].seriesName + ' : ' + params[0].value + '<br/>'
+			                   + params[1].seriesName + ' : ' + params[1].value + '';
 			        },
 			        axisPointer: {
 			            animation: false
 			        }
 			    },
 			    legend: {
-			        data:['data1','data2'],
+			        data:[cmpChartNameStr0,cmpChartNameStr1],
 			        x: 'left'
 			    },
 			    dataZoom: [
@@ -75,7 +77,7 @@
 			    ],
 			    series: [
 			        {
-			            name:'data1',
+			            name:cmpChartNameStr0,
 			            type:'line',
 			            hoverAnimation: false,
 			            areaStyle: {
@@ -89,7 +91,7 @@
 			            data:cmpChartData1_data
 			        },
 			        {
-			            name:'data2',
+			            name:cmpChartNameStr1,
 			            type:'line',
 			            yAxisIndex:1,
 			            hoverAnimation: false,
