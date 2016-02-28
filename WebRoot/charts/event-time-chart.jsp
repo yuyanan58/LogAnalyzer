@@ -47,7 +47,7 @@
 		    dataZoom: {
 		        type: 'inside',
 		        start: 60,
-		        end: 80
+		        end: 180
 		    },
 		    series: [
 		        {

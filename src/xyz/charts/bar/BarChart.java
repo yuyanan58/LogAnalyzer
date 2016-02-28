@@ -11,6 +11,8 @@ import net.sf.json.JSONObject;
 import antlr.collections.List;
 import xyz.controller.analyzer.Analyzer;
 import xyz.model.event.Event;
+import xyz.tools.analyzer2events.Analyzer2eventList;
+import xyz.tools.analyzer2events.Analyzer2eventList.Event_li;
 
 /**
  * timeStamp & eventType
@@ -35,20 +37,6 @@ public class BarChart {
 		}
 	}
 
-	private static class Event_li implements Comparable{
-		String name ;
-		int cnt ;
-		@Override
-		public int compareTo(Object o) {
-			Event_li t = (Event_li)o ;
-			return this.cnt < t.cnt ? 1 : -1 ;
-		}
-		@Override
-		public String toString() {
-			return "[" + name + ", " + cnt + "]";
-		}
-	}
-	
 	private String doPath2Str(Analyzer analyzer) {
 		
 		String[] NAME_data = map2NAMEString(analyzer);
@@ -188,29 +176,9 @@ public class BarChart {
 		return resStrings;
 	}
 
+	
 	private String[] map2NAMEString(Analyzer analyzer) {
-		HashMap<String, Integer> event_map = new HashMap<>();
-		for(Event event:analyzer.getEvents()){
-			String tString = event.getEventType() ;
-			if(event_map.get(tString) == null){
-				event_map.put(tString, 1);
-			}else{
-				event_map.put(tString, event_map.get(tString) + 1);
-			}
-		}
-		
-		Event_li[] temp = new Event_li[event_map.size()];
-		int ind_temp = 0 ;
-		for(String key:event_map.keySet()){
-			temp[ind_temp] = new Event_li(); 
-			temp[ind_temp].name = key ;
-			temp[ind_temp].cnt  = event_map.get(key) ;
-			ind_temp ++ ;
-		}
-		Arrays.sort(temp) ;
-		if(DEBUG) {
-			System.out.println(Arrays.toString(temp));
-		}
+		Event_li[] temp = Analyzer2eventList.analyzer2NAMEString(analyzer);
 		/**
 		 * 所有要展示的事件类型。
 		 */

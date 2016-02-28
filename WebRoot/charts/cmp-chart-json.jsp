@@ -1,22 +1,7 @@
 <%@ page language="java" import="java.util.*" contentType="text/html; charset=utf-8"%>
-{
-	"data1" : [ "直接访问", "邮件营销", "联盟广告", "视频广告", "搜索引擎" ],
-	"data2" : [ 
-		{
-			"value" : 335,
-			"name" : "直接访问"
-		}, {
-			"value" : 310,
-			"name" : "邮件营销"
-		}, {
-			"value" : 234,
-			"name" : "联盟广告"
-		}, {
-			"value" : 135,
-			"name" : "视频广告"
-		}, {
-			"value" : 1548,
-			"name" : "搜索引擎"
-		} 
-	]
-}
+<%@ page import="xyz.charts.cmp.CmpChart" %>
+<%
+	String path = "L:/codesoft/Tomcat/apache-tomcat-7.0.68/webapps/dreaming/logFiles/a.log";
+	CmpChart chart = new CmpChart(path, 1, 2);
+	out.print(chart.getCmpStr());
+%>

@@ -80,17 +80,7 @@
                 </div>
             </div>
         </div>
-        
-        <div class="grid_10">
-        	<div class="box round first">
-        		 <h2>Bar-Chart</h2>
-        		 <div class="ec-bar-chart">
-        		 	<jsp:include page="/charts/bar-chart.jsp" />
-				 </div>
-
-            </div>     
-        </div>
-        
+                
         <div class="grid_10">
             <div class="box round">
                 <h2>Pie-Chart</h2>
@@ -107,6 +97,16 @@
         		 	<jsp:include page="/charts/event-time-chart.jsp" />
 				 </div>                
             </div>
+        </div>
+        
+        <div class="grid_10">
+        	<div class="box round first">
+        		 <h2>Bar-Chart</h2>
+        		 <div class="ec-bar-chart">
+        		 	<jsp:include page="/charts/bar-chart.jsp" />
+				 </div>
+
+            </div>     
         </div>
         
         <div class="grid_10">
