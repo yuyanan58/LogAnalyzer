@@ -4,22 +4,38 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Charts | BlueWhale Admin</title>
-    
-    <jsp:include page="../view/include/head-include.jsp" />
-	<jsp:include page="../view/include/my-head-include-file.jsp"/>
-	
+    <title>Pretty Photo | BlueWhale Admin</title>
+    <%@ include file="../view/include/head-include.jsp" %>
+    <!-- <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/layout.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/nav.css" media="screen" />
+    <link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+    [if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]
+    [if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]
+    BEGIN: load jquery
+    <script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery-ui/jquery.ui.core.min.js"></script>
+    <script src="js/jquery-ui/jquery.ui.widget.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui/jquery.ui.accordion.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui/jquery.effects.core.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui/jquery.effects.slide.min.js" type="text/javascript"></script>
+    END: load jquery
+    <script src="js/pretty-photo/jquery.prettyPhoto.js" type="text/javascript"></script>
+    <script src="js/setup.js" type="text/javascript"></script> -->
     <script type="text/javascript">
         $(document).ready(function () {
+            //setupPrettyPhoto();
             setupLeftMenu();
 			setSidebarHeight();
         });
     </script>
+   
 </head>
 <body>
     <div class="container_12">
-    
-        <div class="grid_12 header-repeat">
+    	<div class="grid_12 header-repeat">
 			<jsp:include page="../view/include/header.jsp"/>
         </div>
         <div class="clear">
@@ -28,8 +44,7 @@
 			<jsp:include page="../view/include/nav.jsp" />
         </div>
         
-        <div class="clear">
-        </div>
+        <div class="clear"> </div>
         <div class="grid_2">
             <div class="box sidemenu">
                 <div class="block" id="section-menu">
@@ -71,66 +86,33 @@
                             </ul>
                         </li>
                     </ul>
-                    
-                    
                 </div>
             </div>
         </div>
-                
         <div class="grid_10">
-            <div class="box round">
-                <h2>Pie-Chart</h2>
-        		 <div class="ec-pie-chart">
-        		 	<jsp:include page="/charts/pie-chart.jsp" />
-				 </div>                
+            <div class="box round first">
+                    <h2>Gallery</h2>
+                    <div class="block">
+                    <ul class="prettygallery clearfix">
+                        <li><a href="/dreaming/logFiles/a.log" rel="prettyPhoto[gallery2]"
+                            title="a.log">
+                            <img src="/dreaming/lib/img/log-logo.jpg" alt="This is a pretty long title" /><br/><p>a.log</p></a></li>
+                            
+                        <li><a href="/dreaming/logFiles/b.log" rel="prettyPhoto[gallery2]"
+                            title="Description on a single line.">
+                            <img src="/dreaming/lib/img/log-logo.jpg"  alt="" /><br/><p>b.log</p></a></li>
+                            
+                        <li><a href="/dreaming/logFiles/c.log" rel="prettyPhoto[gallery2]">
+                            <img src="/dreaming/lib/img/log-logo.jpg"  alt="" /><br/><p>c.log</p></a></li>
+                            
+                        <li><a href="/dreaming/logFiles/d.log" rel="prettyPhoto[gallery2]">
+                            <img src="/dreaming/lib/img/log-logo.jpg"  alt="" /><br/><p>d.log</p></a></li>
+                        <li><a href="/dreaming/logFiles/d.log" rel="prettyPhoto[gallery2]">
+                            <img src="/dreaming/lib/img/log-logo.jpg"  alt="" /><br/><p>d.log</p></a></li>    
+                    </ul>
+                </div>
             </div>
         </div>
-        
-        <div class="grid_10">
-            <div class="box round">
-                <h2>事件发生的时间分布</h2>
-        		 <div class="ec-event-time-chart">
-        		 	<jsp:include page="/charts/event-time-chart.jsp" />
-				 </div>                
-            </div>
-        </div>
-        
-        <div class="grid_10">
-        	<div class="box round first">
-        		 <h2>Bar-Chart</h2>
-        		 <div class="ec-bar-chart">
-        		 	<jsp:include page="/charts/bar-chart.jsp" />
-				 </div>
-
-            </div>     
-        </div>
-        
-        <div class="grid_10">
-            <div class="box round">
-                <h2>Cmp-Chart</h2>
-        		 <div class="ec-cmp-chart">
-        		 	<jsp:include page="/charts/cmp-chart.jsp" />
-				 </div>                
-            </div>
-        </div>
-                       
-<!--    暂时用不到这样的图。     
-		<div class="grid_5">
-        	<div class="box round">
-        		 <h2> Charts</h2>
-                 <div id="donuts-chart">
-                    </div>
-            </div>     
-        </div>
-        <div class="grid_5">
-        	<div class="box round">
-        		 <h2> Charts</h2>
-                  <div id="bubble-chart">
-                    </div>
-            </div>     
-        </div> 
--->
-        
         <div class="clear">
         </div>
     </div>

@@ -74,7 +74,8 @@
                 <h2>Notifications</h2>
                 
                 <div class="block">
-            
+            	<p style="font-size:26px;">哈哈哈</p>
+            <!-- 
                             <div class="message info">
                                 <h5>Information</h5>
                                 <p>
@@ -100,7 +101,7 @@
                                 </p>
                             </div>
                         </div>
-                
+             -->    
             </div>
         </div>
         <div class="clear">

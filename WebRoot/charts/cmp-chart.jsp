@@ -65,12 +65,12 @@
 			        {
 			            name: 'event1<次>',
 			            type: 'value',
-			            max: 5
+			            max: 13
 			        },
 			        {
 			            name: 'event2<次>',
 			            nameLocation: 'start',
-			            max: 5,
+			            max: 13,
 			            type: 'value',
 			            inverse: true
 			        }
