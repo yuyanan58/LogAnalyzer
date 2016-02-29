@@ -63,7 +63,9 @@ public class CmpChart {
 					if(event2.getTimeStamp() > res.time_tmp[ind_time_tmp] ){
 						break ;
 					}else if(event2.getTimeStamp() < res.time_tmp[ind_time_tmp]){
-						System.out.println("ERROR");
+						if(DEBUG){
+							System.out.println("ERROR");
+						}
 					}
 				}
 				int cnt1 = 0 ;

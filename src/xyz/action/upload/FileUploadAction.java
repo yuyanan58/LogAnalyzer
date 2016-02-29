@@ -8,6 +8,7 @@ import org.apache.struts2.ServletActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class FileUploadAction extends ActionSupport {
+	private static final boolean DEBUG = false ;
 	private File upload;
 	private String uploadContentType;
 	private String uploadFileName;
@@ -39,7 +40,10 @@ public class FileUploadAction extends ActionSupport {
 	
 	@Override
 	public String execute() throws Exception {
-		String path = ServletActionContext.getServletContext().getRealPath( "/aaaaatest");
+		if(DEBUG){
+			System.out.println("BIGNEWS : UPLOAD IS RUNING");
+		}
+		String path = ServletActionContext.getServletContext().getRealPath( "/logFiles");
 		File file = new File(path);
 		if (file.exists() == false) {
 			file.mkdir();

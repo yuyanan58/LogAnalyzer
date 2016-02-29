@@ -2,12 +2,13 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
 	<package name="default" namespace="/" extends="struts-default">
-		<action name="upload" class="xyz.action.upload.FileUploadAction">
-				<result>/dreaming/view/index.jsp</result>
-				<interceptor-ref name="fileUpload">
-					<param name="maximumSize">2M</param>
-				</interceptor-ref>
-				<interceptor-ref name="defaultStack"></interceptor-ref>
+		<default-action-ref name="error"></default-action-ref>
+	</package>
+	
+	<package name="view" namespace="/view" extends="struts-default">
+		<default-action-ref name="error"></default-action-ref>
+		<action name="Upload" method="execute" class="xyz.action.upload.FileUploadAction">
+				<result name="success">/view/log-gallery.jsp</result>
 		</action>
 	</package>	
 </struts>    

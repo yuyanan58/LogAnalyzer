@@ -5,7 +5,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Pretty Photo | BlueWhale Admin</title>
-    <%@ include file="../view/include/head-include.jsp" %>
+    <%@ include file="../include/head-include.jsp" %>
     <!-- <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" />
@@ -26,7 +26,7 @@
     <script src="js/setup.js" type="text/javascript"></script> -->
     <script type="text/javascript">
         $(document).ready(function () {
-            //setupPrettyPhoto();
+            setupPrettyPhoto();
             setupLeftMenu();
 			setSidebarHeight();
         });
@@ -36,12 +36,12 @@
 <body>
     <div class="container_12">
     	<div class="grid_12 header-repeat">
-			<jsp:include page="../view/include/header.jsp"/>
+			<jsp:include page="../include/header.jsp"/>
         </div>
         <div class="clear">
         </div>
         <div class="grid_12">
-			<jsp:include page="../view/include/nav.jsp" />
+			<jsp:include page="../include/nav.jsp" />
         </div>
         
         <div class="clear"> </div>
@@ -94,21 +94,48 @@
                     <h2>Gallery</h2>
                     <div class="block">
                     <ul class="prettygallery clearfix">
-                        <li><a href="/dreaming/logFiles/a.log" rel="prettyPhoto[gallery2]"
-                            title="a.log">
-                            <img src="/dreaming/lib/img/log-logo.jpg" alt="This is a pretty long title" /><br/><p>a.log</p></a></li>
+                        <li><a href="/dreaming/lib/img/pretty-photo/fullscreen/item1-full.jpg" rel="prettyPhoto[gallery2]"
+                            title="">
+                            <img src="/dreaming/lib/img/pretty-photo/thumbnails/item1.jpg" alt="This is a pretty long title" /></a></li>
                             
-                        <li><a href="/dreaming/logFiles/b.log" rel="prettyPhoto[gallery2]"
+                        <li><a href="/dreaming/lib/img/pretty-photo/fullscreen/item2-full.jpg" rel="prettyPhoto[gallery2]"
                             title="Description on a single line.">
-                            <img src="/dreaming/lib/img/log-logo.jpg"  alt="" /><br/><p>b.log</p></a></li>
+                            <img src="/dreaming/lib/img/pretty-photo/thumbnails/item2.jpg"  alt="" /></a></li>
                             
-                        <li><a href="/dreaming/logFiles/c.log" rel="prettyPhoto[gallery2]">
-                            <img src="/dreaming/lib/img/log-logo.jpg"  alt="" /><br/><p>c.log</p></a></li>
+                        <li><a href="/dreaming/lib/img/pretty-photo/fullscreen/item3-full.png" rel="prettyPhoto[gallery2]">
+                            <img src="/dreaming/lib/img/pretty-photo/thumbnails/item3.jpg"  alt="" /></a></li>
                             
-                        <li><a href="/dreaming/logFiles/d.log" rel="prettyPhoto[gallery2]">
-                            <img src="/dreaming/lib/img/log-logo.jpg"  alt="" /><br/><p>d.log</p></a></li>
-                        <li><a href="/dreaming/logFiles/d.log" rel="prettyPhoto[gallery2]">
-                            <img src="/dreaming/lib/img/log-logo.jpg"  alt="" /><br/><p>d.log</p></a></li>    
+                        <li><a href="/dreaming/lib/img/pretty-photo/fullscreen/item4-full.png" rel="prettyPhoto[gallery2]">
+                            <img src="/dreaming/lib/img/pretty-photo/thumbnails/item4.jpg"  alt="" /></a></li>
+                            
+                        <li><a href="/dreaming/lib/img/pretty-photo/fullscreen/item5-full.png" rel="prettyPhoto[gallery2]">
+                            <img src="/dreaming/lib/img/pretty-photo/thumbnails/item5.jpg"  alt="" /></a></li>
+                            
+                        <li><a href="/dreaming/lib/img/pretty-photo/fullscreen/item6-full.png" rel="prettyPhoto[gallery2]">
+                            <img src="/dreaming/lib/img/pretty-photo/thumbnails/item6.jpg"  alt="" /></a></li>
+                            
+                        <li><a href="/dreaming/lib/img/pretty-photo/fullscreen/item7-full.png" rel="prettyPhoto[gallery2]">
+                            <img src="/dreaming/lib/img/pretty-photo/thumbnails/item7.jpg"  alt="" /></a></li>
+                            
+                            
+                        <li><a href="/dreaming/lib/img/pretty-photo/fullscreen/item8-full.png" rel="prettyPhoto[gallery2]">
+                            <img src="/dreaming/lib/img/pretty-photo/thumbnails/item8.jpg"  alt="" /></a></li>
+                            
+                        <li><a href="/dreaming/lib/img/pretty-photo/fullscreen/item9-full.png" rel="prettyPhoto[gallery2]">
+                            <img src="/dreaming/lib/img/pretty-photo/thumbnails/item9.jpg"  alt="" /></a></li>
+                            
+                        <li><a href="/dreaming/lib/img/pretty-photo/fullscreen/item10-full.png" rel="prettyPhoto[gallery2]">
+                            <img src="/dreaming/lib/img/pretty-photo/thumbnails/item10.jpg"  alt="" /></a></li>
+                            
+                        <li><a href="/dreaming/lib/img/pretty-photo/fullscreen/item11-full.png" rel="prettyPhoto[gallery2]">
+                            <img src="/dreaming/lib/img/pretty-photo/thumbnails/item11.jpg"  alt="" /></a></li>
+                            
+                        <li><a href="/dreaming/lib/img/pretty-photo/fullscreen/item12-full.png" rel="prettyPhoto[gallery2]">
+                            <img src="/dreaming/lib/img/pretty-photo/thumbnails/item12.jpg"  alt="" /></a></li>
+                            
+                        <li><a href="/dreaming/lib/img/pretty-photo/fullscreen/item13-full.png" rel="prettyPhoto[gallery2]">
+                            <img src="/dreaming/lib/img/pretty-photo/thumbnails/item13.jpg"  alt="" /></a></li>
+                            
                     </ul>
                 </div>
             </div>
@@ -119,7 +146,9 @@
     <div class="clear">
     </div>
     <div id="site_info">
-		<jsp:include page="../view/include/site-info.jsp"/>
+        <p>
+            Copyright <a href="#">BlueWhale Admin</a>. All Rights Reserved.
+        </p>
     </div>
 </body>
 </html>
