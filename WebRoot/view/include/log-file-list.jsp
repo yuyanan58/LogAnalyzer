@@ -1,9 +1,9 @@
 <%@ page language="java" import="java.util.*" contentType="text/html; charset=utf-8"%>
 <%@ page import="xyz.tools.fileutils.FileUtils" import="java.io.File" %>
-
+<%@ page import="xyz.config.logpath.LogPath" %>
 <ul class="prettygallery clearfix">
 <%
-	String path= "L:/codesoft/Tomcat/apache-tomcat-7.0.68/webapps/dreaming/logFiles/";
+	String path = LogPath.LOGPATH_STRING ;
 	String[] fileList = FileUtils.ListDirectory( new File(path) );
 	String s1 = "<li><a href=\"/dreaming/logFiles/" ;
 	String s2 = " \" rel=\"prettyPhoto[gallery2]\"title=\" " ;
@@ -18,5 +18,5 @@
 		out.print(str) ;
 		out.print(s4) ;
 	}
-%>
+--%>
 </ul>

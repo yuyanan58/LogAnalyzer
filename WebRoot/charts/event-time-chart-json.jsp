@@ -1,7 +1,8 @@
 <%@ page language="java" import="java.util.*" contentType="text/html; charset=utf-8"%>
 <%@ page import="xyz.charts.event_time.EventTimeChart" %>
+<%@ page import="xyz.config.logpath.LogPath" %>
 <%
-	String path = "L:/codesoft/Tomcat/apache-tomcat-7.0.68/webapps/dreaming/logFiles/a.log";
+	String path = LogPath.LOGPATH_STRING + "a.log";
 	EventTimeChart eventTimeChart = new EventTimeChart(path) ;
 	out.print(eventTimeChart.getEventTimeStr());
 %>

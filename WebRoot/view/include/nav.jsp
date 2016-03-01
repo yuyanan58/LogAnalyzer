@@ -18,6 +18,7 @@
         </ul>
     </li> 
 -->
+	<li class="ic-notifications"><a href="/dreaming/yart/index.html"><span>项目日志</span></a></li>
     <li class="ic-notifications"><a href="/dreaming/view/notifications.jsp"><span>关于我们</span></a></li>
 </ul>
 <!-- I am nav end -->
